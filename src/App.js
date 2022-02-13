@@ -1,6 +1,6 @@
 import "./App.css";
 import * as React from "react";
-import { Paper, Typography, Grid, Avatar, Stack } from "@mui/material";
+import { Paper, Typography, Grid, Avatar, Stack, Link } from "@mui/material";
 import {
   createTheme,
   ThemeProvider,
@@ -37,6 +37,23 @@ theme = responsiveFontSizes(theme);
 //     width: theme.spacing(4),
 //   },
 // }));
+
+function Copyright(props) {
+  return (
+    <Typography
+      variant="body2"
+      color="text.secondary"
+      align="center"
+      {...props}
+    >
+      <Link color="inherit" href="mailto:contact@haozhang.name">
+        contactme@haozhang.name
+      </Link>{" "}
+      {"© "}
+      {new Date().getFullYear()}
+    </Typography>
+  );
+}
 
 function App() {
   // const classes = useStyles(theme);
@@ -96,6 +113,10 @@ function App() {
               </a>
             </Stack>
           </Grid>
+          <Copyright
+            color="secondary"
+            sx={{ position: "absolute", bottom: 20 }}
+          />
           {/* <Paper sx={{ height: "35vh" }}></Paper> */}
         </Grid>
       </ThemeProvider>
