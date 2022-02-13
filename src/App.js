@@ -68,14 +68,15 @@ function App() {
           justifyContent="center"
           style={{
             height: "100vh",
+            maxHeight: "-webkit-fill-available",
             backgroundImage: `url(${bgImg})`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
           }}
-          sx={{ pb: 20 }}
+          // sx={{ pb: 20 }}
         >
-          <Grid item xs={3} sx={{ mx: 1 }}>
+          <Grid item xs={3} sx={{ mx: 1, mb: 20 }}>
             <Avatar
               alt="Hao Zhang"
               src={avatar}
