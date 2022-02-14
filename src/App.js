@@ -1,15 +1,11 @@
 import "./App.css";
 import * as React from "react";
 import { Paper, Typography, Grid, Avatar, Stack, Link } from "@mui/material";
-import {
-  createTheme,
-  ThemeProvider,
-  responsiveFontSizes,
-  styled,
-} from "@mui/material/styles";
+import { createTheme, ThemeProvider, responsiveFontSizes, styled } from "@mui/material/styles";
 import { makeStyles } from "@mui/styles";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import BadgeIcon from "@mui/icons-material/Badge";
 
 import bgImg from "./bgImg.jpg";
 import avatar from "./avatar.jpg";
@@ -40,12 +36,7 @@ theme = responsiveFontSizes(theme);
 
 function Copyright(props) {
   return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
+    <Typography variant="body2" color="text.secondary" align="center" {...props}>
       <Link color="inherit" href="mailto:contact@haozhang.name">
         contactme@haozhang.name
       </Link>{" "}
@@ -82,21 +73,10 @@ function App() {
               src={avatar}
               sx={{ width: 110, height: "auto", mx: "auto", mb: 1 }}
             />
-            <Typography
-              component="h4"
-              variant="h4"
-              align="center"
-              color="primary"
-              gutterBottom
-            >
+            <Typography component="h4" variant="h4" align="center" color="primary" gutterBottom>
               Hao Zhang
             </Typography>
-            <Typography
-              variant="h6"
-              align="center"
-              color="secondary"
-              component="p"
-            >
+            <Typography variant="h6" align="center" color="secondary" component="p">
               MSCS @ Northwestern University
             </Typography>
             <Stack
@@ -112,12 +92,13 @@ function App() {
               <a href={linkedinURL}>
                 <LinkedInIcon color="secondary" />
               </a>
+              {/* <a href="#">
+                <BadgeIcon color="secondary" />
+                save for resume
+              </a> */}
             </Stack>
           </Grid>
-          <Copyright
-            color="secondary"
-            sx={{ position: "absolute", bottom: 20 }}
-          />
+          <Copyright color="secondary" sx={{ position: "absolute", bottom: 20 }} />
           {/* <Paper sx={{ height: "35vh" }}></Paper> */}
         </Grid>
       </ThemeProvider>
